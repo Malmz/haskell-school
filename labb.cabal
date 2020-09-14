@@ -6,22 +6,19 @@ cabal-version: 1.12
 
 name:           labb
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/githubuser/labb#readme>
-homepage:       https://github.com/githubuser/labb#readme
-bug-reports:    https://github.com/githubuser/labb/issues
-author:         Author name here
-maintainer:     example@example.com
-copyright:      2020 Author name here
+description:    Please see the README on GitHub at <https://github.com/Malmz/haskell-school#readme>
+homepage:       https://github.com/Malmz/haskell-school#readme
+bug-reports:    https://github.com/Malmz/haskell-school/issues
+author:         Carl, Hampus, Hannes
+maintainer:     callem217@gmail.com
 license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/labb
+  location: https://github.com/Malmz/haskell-school
 
 library
   exposed-modules:
