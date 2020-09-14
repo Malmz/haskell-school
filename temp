@@ -1,0 +1,5 @@
+drawUntil :: Int -> Deck -> Hand -> Hand
+drawUntil n deck hand 
+    | value hand >= n = hand
+    | otherwise = drawUntil n deck' hand'
+    where (deck', hand') = draw deck hand
