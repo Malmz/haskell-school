@@ -1,1 +1,1 @@
-# labb
+# Haskell school work
