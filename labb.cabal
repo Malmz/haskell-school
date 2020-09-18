@@ -12,6 +12,7 @@ bug-reports:    https://github.com/Malmz/haskell-school/issues
 author:         Carl, Hampus, Hannes
 maintainer:     callem217@gmail.com
 license:        BSD3
+license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md

@@ -8,7 +8,7 @@
 
 module Cards where
 
-import Test.QuickCheck
+import Test.QuickCheck hiding (shuffle)
 
 -- | A card has a rank and belongs to a suit
 data Card = Card Rank Suit

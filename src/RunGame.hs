@@ -62,4 +62,4 @@ finish i deck guest = do
 -- A helper function for displaying a hand
 
 displayHand :: Interface -> Hand -> String
-displayHand i hand = show (iValue i hand) ++ if null hand then "" else " with cards: " ++ iDisplay i hand
+displayHand i hand = show (iValue i hand) ++ if null hand then "" else " with cards:\n" ++ iDisplay i hand

@@ -3,3 +3,37 @@ drawUntil n deck hand
     | value hand >= n = hand
     | otherwise = drawUntil n deck' hand'
     where (deck', hand') = draw deck hand
+
+    -- | Remove element at index n and return it
+takeN :: Int -> [a] -> (a, [a])
+takeN _ [] = error "takeN empty list"
+takeN _ [x] = (x, [])
+takeN n xs = (head s, f ++ drop 1 s)
+  where
+    (f, s) = splitAt n xs
+
+--takeN n d = (d!!n, take (n-1) d ++ drop n d)
+
+{-  Alternative function, TakeNs runtime is faster
+remove :: Int -> [a] -> [a]
+remove _ [] = []
+remove 0 (x:xs) = xs
+remove n (x:xs) = x : remove (n-1) (xs)
+
+takeN'' :: Int -> [a] -> (a, [a])
+takeN'' n xs = (xs!!n, remove n xs)
+    -}
+
+prop_takeN :: Eq a => Int -> [a] -> Property
+prop_takeN n xs = notEmpty xs && n < length xs && n >= 0 ==> fst (takeN n xs) == xs !! n
+  where
+    notEmpty [] = False
+    notEmpty _ = True
+
+-- | shuffles the deck
+shuffle' :: [Double] -> Deck -> Deck
+shuffle' _ [] = []
+shuffle' (rand : rands) deck = card : shuffle rands deck'
+  where
+    index = floor $ rand * fromIntegral (length deck)
+    (card, deck') = takeN index deck

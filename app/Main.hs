@@ -4,7 +4,7 @@ import Lib
 import Blackjack
 import Cards
 import RunGame
-import Test.QuickCheck
+import Test.QuickCheck hiding (shuffle)
 
 main :: IO ()
-main = someFunc
+main = runGame implementation
